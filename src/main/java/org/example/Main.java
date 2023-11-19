@@ -3,6 +3,7 @@ package org.example;
 import org.example.Config.ConnectionDB;
 import org.example.Repository.AuthorCrudOperations;
 import org.example.Repository.BookCrudOperations;
+import org.example.Repository.SubscriberCrudOperations;
 import org.example.Repository.TopicCrudOperations;
 
 import java.sql.Connection;
@@ -15,10 +16,12 @@ public class Main {
            AuthorCrudOperations authorCrudOperations = new AuthorCrudOperations ( connectionDB );
            BookCrudOperations bookCrudOperations = new BookCrudOperations ( connectionDB );
            TopicCrudOperations topicCrudOperations = new TopicCrudOperations ( connectionDB );
+           SubscriberCrudOperations subscriberCrudOperations = new SubscriberCrudOperations ( connectionDB );
 
            authorCrudOperations.findAll ();
            bookCrudOperations.findAll ();
            topicCrudOperations.findAll ();
+           subscriberCrudOperations.findAll ();
        } catch ( SQLException e ) {
            throw new RuntimeException ( e );
        }
