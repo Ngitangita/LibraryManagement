@@ -104,9 +104,9 @@ public class AdministratorCrudOperations implements CrudOperations <Administrato
     @Override
     public Administrator delete(Administrator toDelete){
         try {
-            String query = "DELETE FROM \"administrator\" WHERE id = ?";
+            String sql = "DELETE FROM \"administrator\" WHERE id = ?";
 
-            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
                 preparedStatement.setInt(1, toDelete.getId());
                 preparedStatement.executeUpdate();
             }

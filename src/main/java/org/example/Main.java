@@ -1,10 +1,7 @@
 package org.example;
 
 import org.example.Config.ConnectionDB;
-import org.example.Repository.AuthorCrudOperations;
-import org.example.Repository.BookCrudOperations;
-import org.example.Repository.SubscriberCrudOperations;
-import org.example.Repository.TopicCrudOperations;
+import org.example.Repository.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,13 +14,17 @@ public class Main {
            BookCrudOperations bookCrudOperations = new BookCrudOperations ( connectionDB );
            TopicCrudOperations topicCrudOperations = new TopicCrudOperations ( connectionDB );
            SubscriberCrudOperations subscriberCrudOperations = new SubscriberCrudOperations ( connectionDB );
+           AdministratorCrudOperations administratorCrudOperations = new AdministratorCrudOperations ( connectionDB );
 
            authorCrudOperations.findAll ();
            bookCrudOperations.findAll ();
            topicCrudOperations.findAll ();
            subscriberCrudOperations.findAll ();
+           administratorCrudOperations.findAll ();
+
        } catch ( SQLException e ) {
            throw new RuntimeException ( e );
        }
+
     }
 }

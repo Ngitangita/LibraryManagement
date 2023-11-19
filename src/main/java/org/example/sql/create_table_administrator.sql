@@ -1,0 +1,9 @@
+	
+	CREATE TABLE IF NOT EXISTS  "administrator" (
+	    id SERIAL PRIMARY KEY,
+	    name VARCHAR(255) NOT NULL,
+	    role VARCHAR(50) DEFAULT 'ADMIN',
+	    email VARCHAR(255) UNIQUE,
+	    password VARCHAR(255) NOT NULL,
+	    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+	);

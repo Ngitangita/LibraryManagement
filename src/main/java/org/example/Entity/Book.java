@@ -1,6 +1,5 @@
 package org.example.Entity;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -11,13 +10,6 @@ public class Book {
     private LocalDateTime releaseDate;
     private Author author;
 
-    public Book(){
-        this.id = id;
-        this.bookName = bookName;
-        this.pageNumber = pageNumber;
-        this.releaseDate = releaseDate;
-        this.author = author;
-    }
 
     public int getId(){
         return id;
@@ -43,11 +35,11 @@ public class Book {
         this.pageNumber = pageNumber;
     }
 
-    public Date getReleaseDate(){
+    public LocalDateTime getReleaseDate(){
         return this.releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate){
+    public void setReleaseDate(LocalDateTime releaseDate){
         this.releaseDate = releaseDate;
     }
 
@@ -55,7 +47,7 @@ public class Book {
         return author;
     }
 
-    public void setAuthor(int author){
+    public void setAuthor(Author author){
         this.author = author;
     }
 
@@ -83,6 +75,4 @@ public class Book {
                 '}';
     }
 
-    public void setName(String bookName){
-    }
 }
