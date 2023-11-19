@@ -7,9 +7,8 @@
     <list default="true" id="5838b9b7-3c17-4d20-9883-8942507544a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entity/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Repository/AuthorCrudOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Repository/AuthorCrudOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entity/Topic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/Topic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700382534264</updated>
-      <workItem from="1700382538068" duration="7771000" />
+      <workItem from="1700382538068" duration="11123000" />
     </task>
     <servers />
   </component>

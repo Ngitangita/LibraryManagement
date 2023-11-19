@@ -7,7 +7,7 @@ public class Topic {
     private Book book;
     private TopicName topicName;
 
-    public Topic(int id, Book book, TopicName topicName){
+    public Topic(){
         this.id = id;
         this.book = book;
         this.topicName = topicName;
@@ -21,15 +21,15 @@ public class Topic {
         this.id = id;
     }
 
-    public Book getBook(){
+    public int getBook(){
         return book;
     }
 
-    public void setBook(Book book){
+    public void setBook(String book){
         this.book = book;
     }
 
-    public TopicName getTopicName(){
+    public String getTopicName(){
         return topicName;
     }
 

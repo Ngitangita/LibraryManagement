@@ -3,14 +3,15 @@ package org.example.Entity;
 import java.util.Objects;
 
 public class Author extends User{
+    private static final int id = 0;
     private Sex sex;
 
-    public Author(){
+    public Author(int id, String name, Sex sex){
         super ( id, name );
         this.sex = sex;
     }
 
-    public String getSex(){
+    public Sex getSex(){
         return sex;
     }
 
