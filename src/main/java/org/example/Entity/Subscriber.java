@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Subscriber extends User{
     private String reference;
 
-    public Subscriber(){
+    public Subscriber(int id, String name, String reference){
         super ( id, name );
         this.reference = reference;
     }
