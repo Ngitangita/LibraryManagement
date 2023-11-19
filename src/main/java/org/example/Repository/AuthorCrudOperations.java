@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorCrudOperations implements CrudOperations <Author>{
-    private Connection connection;
+    private final Connection connection;
 
-    public AuthorCrudOperations(){
+    public AuthorCrudOperations(Connection connection){
         this.connection = connection;
     }
 
@@ -18,9 +18,9 @@ public class AuthorCrudOperations implements CrudOperations <Author>{
     public List<Author> findAll(){
         List<Author> authors = new ArrayList<> ();
         try {
-            String query = "SELECT * FROM author";
+            String sql = "SELECT * FROM \"author\"";
             try (Statement statement = connection.createStatement ( )){
-                try (ResultSet resultSet = statement.executeQuery ( query )){
+                try (ResultSet resultSet = statement.executeQuery ( sql )){
                     while (resultSet.next ()) {
                         Author author = new Author (  );
                         author.setId(resultSet.getInt ( "id" ));
@@ -43,8 +43,8 @@ public class AuthorCrudOperations implements CrudOperations <Author>{
     public List<Author> saveAll(List<Author> toSave){
         try {
             connection.setAutoCommit ( false );
-            String query = "INSERT INTO author(name, sex) VALUES ( ?, ?)";
-            try (PreparedStatement preparedStatement = connection.prepareStatement ( query)){
+            String sql = "INSERT INTO \"author\"(name, sex) VALUES ( ?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement ( sql)){
                 for (Author author:toSave){
                     preparedStatement.setString ( 1, author.getName ( ) );
                     preparedStatement.setString ( 2, author.getSex ( ) );
@@ -69,8 +69,8 @@ public class AuthorCrudOperations implements CrudOperations <Author>{
     @Override
     public Author save(Author toSave){
         try {
-            String query = "INSERT INTO author( name, sex) VALUES ( ?, ?)";
-            try (PreparedStatement preparedStatement = connection.prepareStatement ( query, Statement.RETURN_GENERATED_KEYS)){
+            String sql = "INSERT INTO \"author\"( name, sex) VALUES ( ?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement ( sql, Statement.RETURN_GENERATED_KEYS)){
                 preparedStatement.setString ( 1, toSave.getName () );
                 preparedStatement.setString ( 2, toSave.getSex () );
 
@@ -95,8 +95,8 @@ public class AuthorCrudOperations implements CrudOperations <Author>{
     @Override
     public Author delete(Author toDelete){
         try {
-            String query = "DELETE FROM author WHERE id=?";
-            try (PreparedStatement preparedStatement = connection.prepareStatement ( query)){
+            String sql = "DELETE FROM \"author\" WHERE id=?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement ( sql)){
                 preparedStatement.setInt ( 1, toDelete.getId () );
                 preparedStatement.executeUpdate ();
             }

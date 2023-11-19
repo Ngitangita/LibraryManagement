@@ -35,7 +35,7 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public int getPageNumber(int pageNumbers){
+    public int getPageNumber(){
         return pageNumber;
     }
 
@@ -43,11 +43,11 @@ public class Book {
         this.pageNumber = pageNumber;
     }
 
-    public LocalDateTime getReleaseDate(Date releaseDate){
+    public Date getReleaseDate(){
         return this.releaseDate;
     }
 
-    public void setReleaseDate(LocalDateTime releaseDate){
+    public void setReleaseDate(Date releaseDate){
         this.releaseDate = releaseDate;
     }
 
@@ -55,7 +55,7 @@ public class Book {
         return author;
     }
 
-    public void setAuthor(Author author){
+    public void setAuthor(int author){
         this.author = author;
     }
 

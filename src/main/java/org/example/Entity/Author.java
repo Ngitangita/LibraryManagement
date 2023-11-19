@@ -5,13 +5,9 @@ import java.util.Objects;
 public class Author extends User{
     private Sex sex;
 
-    public Author(int id, String name, Sex sex){
+    public Author(){
         super ( id, name );
         this.sex = sex;
-    }
-
-    public Author(){
-        super ( );
     }
 
     public String getSex(){
